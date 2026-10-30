@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Abbie Richey Butler | The Lightworker</title>
+<meta name="description" content="Abbie Richey Butler writes middle-grade fiction. The Lightworker: Rise of the Shadows, for readers 9 to 13.">
+<meta property="og:title" content="A homepage for Abbie Richey Butler, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Abbie Richey Butler and The Lightworker: Rise of the Shadows, made by Sparsh Saini. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/abbiericheybutler/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b1d5c'/><path d='M16 3l1.6 11.4L29 16l-11.4 1.6L16 29l-1.6-11.4L3 16l11.4-1.6z' fill='%23ffe7b0'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/cover.jpg">
+<style>
+/* From The Lightworker cover: the night blue, the bright azure behind Lucy, the lighthouse lamp gold,
+   the glowing white decorative capitals. Cinzel Decorative is the cover's swashed title; Lora reads beside it. */
+:root {
+  --night: #071338; --deep: #0b1d5c; --azure: #2f6fd6; --mist: #9cc3f2; --lamp: #ffc766; --glow: #fff6e2;
+  --display: "Cinzel Decorative", Georgia, serif; --text: "Lora", Georgia, serif;
+  --gut: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--night); color: var(--glow); font-family: var(--text); font-size: 1.1rem; line-height: 1.6; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--lamp); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.1; margin: 0; text-shadow: 0 0 18px rgba(156,195,242,.45); }
+.strip { position: relative; z-index: 30; background: var(--glow); color: var(--night); font-size: .9rem; text-align: center; padding: .45rem var(--gut); }
+
+/* nav: a lighthouse lamp you switch on */
+.lamp { position: fixed; z-index: 40; right: 12px; top: 12px; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,246,226,.5); background: rgba(7,19,56,.75); cursor: pointer; display: grid; place-items: center; }
+.lamp svg { width: 26px; height: 26px; }
+.nav { position: fixed; z-index: 50; inset: 0; background: rgba(7,19,56,.95); display: none; padding: 5rem var(--gut); }
+.nav.open { display: block; }
+.nav ol { list-style: none; margin: 0; padding: 0; }
+.nav a { display: block; padding: .7rem 0; font-family: var(--display); font-size: 1.5rem; text-decoration: none; border-bottom: 1px solid rgba(156,195,242,.25); }
+.nav a:hover { color: var(--lamp); }
+
+/* ---------- the light comes on (pinned hero) ---------- */
+.hero { position: relative; height: 360vh; }
+.stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--night); }
+.cover { position: absolute; left: 50%; top: 70px; transform: translateX(-50%); width: min(calc(100vw - 24px), calc((100svh - 230px) * .6639)); aspect-ratio: 869 / 1309; overflow: hidden; background: var(--night); }
+.cover > * { position: absolute; max-width: none; will-change: transform, opacity; }
+.base { inset: 0; width: 100%; }
+.dark { inset: 0; background: radial-gradient(ellipse at 47% 22%, rgba(7,19,56,.55), #050c26 70%); }
+.h1 { left: 62.14%; top: 12.99%; width: 32.22%; transform-origin: 0% 100%; }
+.h2 { left: 0; top: 60.35%; width: 22.44%; transform-origin: 0% 50%; }
+.h3 { left: 72.5%; top: 67.99%; width: 27.5%; transform-origin: 100% 100%; }
+.star { left: 12.66%; top: -1.15%; width: 69.04%; opacity: 0; }
+.beam { left: 1.7%; top: .4%; width: 30%; opacity: 0; }
+.cap { position: absolute; left: var(--gut); right: var(--gut); bottom: 16px; height: 140px; }
+.cap > div { position: absolute; inset: 0; opacity: 0; will-change: opacity; }
+.cap .c1 { opacity: 1; }
+.cap p { margin: 0; }
+.cap .big { font-family: var(--display); font-weight: 700; font-size: 1.45rem; line-height: 1.2; }
+.cap .sm { font-style: italic; color: var(--mist); font-size: 1rem; }
+.btn { display: inline-block; margin-top: .6rem; font-family: var(--display); font-weight: 700; font-size: .95rem; text-decoration: none; color: var(--night); background: var(--glow); border-radius: 999px; padding: .55rem 1.2rem; box-shadow: 0 0 22px rgba(255,231,176,.55); }
+.btn:hover { background: var(--lamp); }
+.btn.ghost { background: none; color: var(--glow); box-shadow: inset 0 0 0 1px var(--glow); }
+@media (min-width: 900px) {
+  .cover { left: auto; right: 9vw; top: 50%; transform: translateY(-50%); width: calc((100svh - 70px) * .6639); }
+  .cap { left: var(--gut); right: auto; bottom: auto; top: 50%; height: 15rem; width: min(30rem, 38vw); transform: translateY(-50%); }
+  .cap .big { font-size: 2.3rem; }
+}
+
+/* ---------- sections ---------- */
+section.s { padding: clamp(3.5rem, 9vw, 6.5rem) var(--gut); }
+.s h2 { font-size: clamp(1.9rem, 6.5vw, 3.2rem); }
+.lede { max-width: 40rem; margin: 1rem 0 0; }
+.book { background: linear-gradient(180deg, var(--night), var(--deep)); display: grid; gap: 2rem; }
+@media (min-width: 900px) { .book { grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: center; } }
+.book img { border-radius: 4px; box-shadow: 0 0 60px rgba(47,111,214,.55); max-width: 22rem; }
+.book blockquote { margin: 1.4rem 0 0; font-family: var(--display); font-size: 1.25rem; color: var(--lamp); }
+.packet { background: var(--azure); color: #fff; }
+.packet .sheet { margin-top: 1.6rem; max-width: 36rem; background: var(--glow); color: var(--night); padding: 1.4rem 1.5rem; border-radius: 6px; transform: rotate(-1deg); box-shadow: 0 10px 0 rgba(7,19,56,.35); }
+.packet .sheet ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+.packet .sheet .btn { background: var(--deep); color: var(--glow); box-shadow: none; }
+.visits { background: var(--deep); }
+.visits p { max-width: 40rem; }
+.fair { background: var(--night); text-align: center; }
+.fair .d { font-family: var(--display); font-weight: 700; color: var(--lamp); font-size: clamp(2.6rem, 11vw, 4.6rem); line-height: 1; margin-top: 1.2rem; text-shadow: 0 0 30px rgba(255,199,102,.5); }
+.fair p { max-width: 34rem; margin: .6rem auto; }
+.about { background: var(--deep); border-top: 1px solid rgba(156,195,242,.25); }
+.about p { max-width: 40rem; }
+footer { background: var(--night); color: var(--mist); text-align: center; font-size: .88rem; padding: 1.2rem var(--gut) 2.5rem; }
+@media (prefers-reduced-motion: reduce) { .hero { height: auto; } .stage { position: relative; height: 100svh; } }
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Abbie Richey Butler. Not their official site.</div>
+<button class="lamp" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l1.3 10.7L25 13l-10.7 1.3L13 25l-1.3-10.7L1 13l10.7-1.3z" fill="#ffe7b0"/></svg></button>
+<nav class="nav" id="nav" aria-label="Sections">
+  <ol>
+    <li><a href="#top">The Lightworker</a></li>
+    <li><a href="#book">Lucy's story</a></li>
+    <li><a href="#packet">Free activity packet</a></li>
+    <li><a href="#visits">School visits</a></li>
+    <li><a href="#fair">Leonardtown, 7 November</a></li>
+    <li><a href="#about">About Abbie</a></li>
+  </ol>
+</nav>
+
+<main>
+<section class="hero" id="top" aria-label="The Lightworker: Rise of the Shadows">
+  <div class="stage">
+    <div class="cover" role="img" aria-label="The cover of The Lightworker: Rise of the Shadows by Abbie Richey Butler: a girl in silhouette with light shining from her forehead, a lighthouse behind her, shadow hands reaching in">
+      <img class="base" src="img/cover.jpg" alt="" width="869" height="1309">
+      <div class="dark"></div>
+      <img class="beam" src="img/star.webp" alt="" width="600" height="600">
+      <img class="star" src="img/star.webp" alt="" width="600" height="600">
+      <img class="h1" src="img/hand1.webp" alt="" width="280" height="330">
+      <img class="h2" src="img/hand2.webp" alt="" width="195" height="320">
+      <img class="h3" src="img/hand3.webp" alt="" width="239" height="419">
+    </div>
+    <div class="cap">
+      <div class="c1"><p class="big">What if the shadows in your dreams didn't stay there?</p></div>
+      <div class="c2"><h1 class="big">The Lightworker: Rise of the Shadows</h1><p class="sm">Some secrets refuse to stay hidden.</p><a class="btn" href="https://www.amazon.com/dp/B0GSFLT7G2">Get it on Amazon</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="s book" id="book">
+  <img src="img/cover.jpg" alt="The Lightworker: Rise of the Shadows cover" width="869" height="1309" loading="lazy">
+  <div>
+    <h2>Lucy can see your light</h2>
+    <p class="lede">Twelve-year-old Lucy Miller has been lying to everyone since she was seven. She would have started earlier if she'd known it wasn't normal to see a beam of light shining from people's foreheads. She's also the only one in her family haunted by shadow creatures when she sleeps.</p>
+    <p class="lede">Now, just in time for middle school, the shadows are getting stronger. When they seep into the daytime and people's lights start going out one by one, Lucy has to find out the truth about her strange ability before the darkness swallows her small town.</p>
+    <blockquote>Because she's seen a light go out before.</blockquote>
+    <p><a class="btn" href="https://www.amazon.com/dp/B0GSFLT7G2">Paperback</a> <a class="btn ghost" href="https://www.amazon.com/dp/B0H29FJCFQ">Hardcover</a> <a class="btn ghost" href="https://www.goodreads.com/book/show/249645467-the-lightworker">Goodreads</a></p>
+  </div>
+</section>
+
+<section class="s packet" id="packet">
+  <h2>Screen-free, kid-approved</h2>
+  <div class="sheet">
+    <p><b>The free Lightworker activity packet</b>, for readers 9 to 13. Print it straight from home, no email sign-up.</p>
+    <ul><li>Design your own shadow creature</li><li>Which colour is your light? A quiz</li><li>Worksheets and discussion prompts</li></ul>
+    <a class="btn" href="https://drive.google.com/file/d/1EvWq6c2yitJQvcs46LwsqvNpR-tMqm3T/view?usp=sharing">Download the packet</a>
+  </div>
+</section>
+
+<section class="s visits" id="visits">
+  <h2>School visits and book clubs</h2>
+  <p class="lede">Abbie loves connecting with students and encouraging creative writing through storytelling, class discussions and hands-on lessons. Her Whimsy Log Academy on YouTube has daily ten-minute, zero-prep writing prompts for grades 4 to 6.</p>
+  <p><a class="btn ghost" href="https://www.youtube.com/@WhimsyLogPress">Whimsy Log Academy</a></p>
+</section>
+
+<section class="s fair" id="fair">
+  <h2>Come and see the light</h2>
+  <div class="d">Sat 7 Nov</div>
+  <p>St. Mary's County Library Author Fair, Leonardtown Library, Maryland, 10 am to 4 pm.</p>
+</section>
+
+<section class="s about" id="about">
+  <h2>About Abbie</h2>
+  <p class="lede">Abbie Richey Butler writes middle-grade fiction that blends mystery, imagination and emotional depth. With a background in psychology and education, she writes stories about identity, courage and finding out who you are.</p>
+  <p><a class="btn ghost" href="https://www.instagram.com/abbiericheybutler/">Instagram</a> <a class="btn ghost" href="https://www.facebook.com/abbiericheybutler/">Facebook</a></p>
+</section>
+</main>
+<footer>A mockup made by Sparsh Saini for Abbie Richey Butler. Not affiliated, not live.</footer>
+
+<script>
+(() => {
+  const m = document.querySelector('.lamp'), n = document.getElementById('nav');
+  m.addEventListener('click', () => { const o = n.classList.toggle('open'); m.setAttribute('aria-expanded', o); });
+  n.addEventListener('click', e => { if (e.target.closest('a')) { n.classList.remove('open'); m.setAttribute('aria-expanded', false); } });
+  const hero = document.querySelector('.hero'), q = s => document.querySelector(s);
+  const dark = q('.dark'), star = q('.star'), beam = q('.beam'), h1 = q('.h1'), h2 = q('.h2'), h3 = q('.h3'), c1 = q('.c1'), c2 = q('.c2');
+  const cl = (x, a, b) => Math.min(1, Math.max(0, (x - a) / (b - a)));
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  let top = 0, span = 1;
+  const measure = () => { top = hero.offsetTop; span = hero.offsetHeight - innerHeight; };
+  const draw = p => {
+    // 0 to .3: the shadows reach in. .3 to .7: her light comes on and pushes them back. then the lighthouse.
+    const g = cl(p, 0, .3), l = ease(cl(p, .3, .7));
+    const reach = (1 - l) * (.4 + .6 * g);
+    h1.style.transform = `translate(${-reach * 45}%, ${reach * 35}%) scale(${1 + reach * .5}) rotate(${-reach * 12}deg)`;
+    h2.style.transform = `translate(${reach * 60}%, ${-reach * 20}%) scale(${1 + reach * .5}) rotate(${reach * 10}deg)`;
+    h3.style.transform = `translate(${-reach * 55}%, ${-reach * 30}%) scale(${1 + reach * .45}) rotate(${reach * 12}deg)`;
+    const fade = cl(p, .85, 1); h1.style.opacity = h2.style.opacity = h3.style.opacity = 1 - fade;
+    dark.style.opacity = (.85 * (1 - l)).toFixed(3);
+    const s = cl(p, .28, .5), s2 = cl(p, .5, .8);
+    star.style.opacity = (s * (1 - .55 * s2)).toFixed(3);
+    star.style.transform = `scale(${.2 + 1.3 * ease(s) - .5 * s2}) rotate(${p * 40}deg)`;
+    const b = cl(p, .72, .9); beam.style.opacity = (b * (1 - .5 * cl(p, .9, 1))).toFixed(3); beam.style.transform = `scale(${.3 + .7 * b})`;
+    const k = cl(p, .55, .7); c1.style.opacity = 1 - k; c2.style.opacity = k; c2.style.pointerEvents = k > .5 ? 'auto' : 'none';
+  };
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { draw(1); return; }
+  measure(); addEventListener('resize', measure);
+  let last = -1;
+  const tick = () => { const p = Math.min(1, Math.max(0, (scrollY - top) / span)); if (p !== last) { draw(p); last = p; } requestAnimationFrame(tick); };
+  draw(0); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
